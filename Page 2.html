@@ -1,0 +1,112 @@
+<html>
+<link rel="icon" href="http://www.clker.com/cliparts/1/b/d/f/1207432106921685105technical%20rock%20climbing%20white.svg.hi.png">
+<head>
+<link rel="stylesheet" type="text/css" href="Page 2.css">
+</head>
+<title>The language of SQL</title>
+<img class = "banner" src = "banner.png">
+
+<ul><b>
+  <li><a href="#home">Databases - The basics</a></li>
+  <li><a class="active" href="#news">The language of SQL</a></li>
+  <li><a href="#contact">DBMS</a></li>
+  <li><a href="#about">Normalisation</a></li>
+  <li><a href="#about">Database security</a></li>
+</ul></b>
+
+<hr>
+<h1><u> The language of SQL </u></h1>
+<div>
+<h2><u>Introduction to SQL</u></h2>
+	<p> SQL stands for Structured Query Language and is the language used to communicate, print and display data from within a database.
+	Databases are used everywhere from Hospitals to schools to store things from medication a certain patient is on from the grades of student at school. For example, have you ever
+	recieved a letter from school and it shows the grades from that year? You ever wonder how long it must take to edit everyones indiviual grades and send them out? Thanks to SQL 
+	commands (or queries) any information can be printed in any order you require in only a few simple steps. 
+	</p>
+	<h2><u> Examples of SQL commands: </u></h2>
+	<p> There are many SQL commands but below are some of the most common and most useful:</p>
+	
+	<h3><u> Alter table: </u></h3>
+	<p> This command is used to add collums to your database and the syntax looks like this:</p>
+	<p class ="Code" style="color:white;"> ALTER table NameOfTable ADD collum datatype; </p>
+	<p> ALTER tells SQL you wish to edit the existing table and the postion of 'NameOfTable' tells SQL what table to add a collum to. There is also an option to state which datatype
+	you wish the collum to take the form of</p>
+	<h3><u>AVG: </u></h3>
+	<p> AVG is a built in function in SQL which can return the average for a numberic collum in a database.
+	<p class ="Code" style="color:white;"> SELECT AVG(NameOfColumn) FROM NameOfTable;</p>
+	<p> AVG() tells SQL that the collum referenced in the brackets is full of numberical datatypes and to sum the contents and divide them by the amount of data present and return that value</p>
+	<h3><u>CREATE TABLE: </u></h3>
+	<p> CREATE TABLE creates a new table in the database.</p>
+	<p class ="Code" style="color:white;"> CREATE TABLE NameOfTable (NameOfColumn, datatype, NameOfColumn, datatype);</p>
+	<p> As shown above you can also indictate the contents of the table such as the names of the collums and there respected datatypes.</p>
+	<h3><u> DELETE:</u></h3>
+	<p> This is a statment which can delete rows from a table</p>
+	<p class ="Code" style="color:white;"> DELETE FROM NameOfTable WHERE NameOfColumn = value;</p>
+	<p> DELETE FROM tells SQL the location of the table in the database to delete from and more specifically the collum and which row.</p>
+	<h3><u> GROUP BY:</u></h3>
+	<p> GROUP BY is a function in SQL which uses the SELECT feature to group collums of data which meet given conditions in the same place.</p>
+	<p class ="Code" style="color:white;">SELECT COUNT(*) FROM NameOfTable GROUP BY NameOfColumn;</p>
+	<h3><u>SELECT:</u></h3>
+	<p>The SELECT statement is used to insert new rows into a database table</p>
+	<p class ="Code" style="color:white;">INSERT INTO NameOfTable (NameOfColumn, NameOfColumn, NameOfColumn) VALUES (value, value);</p>
+	<h3><u>ORDER BY:</u></h3>
+	<p> ORDER BY is a function in SQL which allows you to sort your data by the conditions set, for example by postcode or country. This allows data to be displayed easier and in a more useful format.</p>
+	<p class ="Code" style="color:white;">SELECT NameOfColumn FROM NameOfTable ORDER BY postcode;</p>
+	<p> By selecting data from 'NameOfColumn' SQL can order by the ID 'postcode' meaning that the data will be displayed something like this;</p>
+	<p class="Code" style="color:white;">Thomas the tank engine, E17;</p>
+	<p class="Code" style="color:white;">Bob the builder, N5;</p>
+	<p class="Code" style="color:white;">Postman pat, N5;</p>
+	<p class="Code" style="color:white;">Noddy, N17;</p>
+   
+   
+</div>
+<div class = "box2">
+<img src = "SQL.png">
+
+<hr>
+
+<h2><u> Additional information about SQL: </u></h2>
+
+<h3><u> Datatypes </u></h3>
+
+<p>In SQL databases store data depending on it's datatype. This helps SQL in which way it should present and assume that data and so that duplication of data does not occur. SQL has many datatypes but for the purpose of this we are only going to go into the SQLite datatypes as they are simple to understand and can carry you into understanding the other datatypes.</p>
+  
+  <p>
+  <img class = "data" src = "NULL.png">
+  <b>The NULL</b>datatype tells SQL that the record is empty or is equal to 0.
+  <hr>
+
+  <img class = "data" src = "INT.png">	
+  <b>The INTEGER</b> datatype tells SQL that the data in that record is a whole number.  
+  <hr>
+
+  <img class = "data" src = "REAL.png">
+  <b>The REAL</b> datatype tells SQL that the value stored is an aproximation of a 'real' number. 
+  <hr>
+
+  <img class = "data" src = "TEXT.png">
+  <b>The TEXT</b> datatype tells SQL that the value stored is in words or letters. 
+  <hr>
+
+  <img class = "data" src = "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Blush_200px_JBjqWKR.gif">
+  <b>The BLOB</b> datatype tells SQL that the value stored is raw from a users input. 
+  </p>
+<hr>
+<p> These data types all help SQL to determine why they are being used and how it should be ordered and written within the database </p>
+<hr>
+<h3><u> Relations </u></h3>
+<p> Databases use relations to link data and tables which are connected or of relevance to eachother and there and many different types of links:</p>
+<p><img class = "one2one" src = "http://www.teach-ict.com/as_a2_ict_new/ocr/AS_G061/315_database_concepts/attributes_entities/miniweb/images/one2one.jpg"><b><u>One-to-one:</b></u>
+Is a relationship in a database between two tables, they should be associated with each other by only one row. An example like to the left could a Husband has only one link, which is his wife. 
+One-to-one realtionships can be created using Primary and foreign key constraints.</p>
+<hr>
+<p><img class = "one2many" src = "http://www.teach-ict.com/as_a2_ict_new/ocr/AS_G061/315_database_concepts/attributes_entities/miniweb/images/one2many.jpg"><b><u>One-to-many:</u></b>
+Is a database relationship between two tables in which a row from a table can have many matching rows in another table, for example a single Mother can have many children.
+The realtionship can be created using Primary and Foreign key relations.</p>
+<hr>
+<p><img class = "many2many" src = "https://support.airtable.com/hc/en-us/article_attachments/206808577/Screen_Shot_2016-04-26_at_3.02.52_PM.png"><b><u>Many-to-many:</b></u>
+Is a database relationship between more than 2 tables in which many rows from many tables can have matching rows in any number of the other tables, for example many authors can have many books.</p>
+</div>
+
+</body>
+</html>

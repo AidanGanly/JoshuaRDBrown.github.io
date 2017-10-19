@@ -1,0 +1,48 @@
+<html>
+<link rel="icon" href="http://www.clker.com/cliparts/1/b/d/f/1207432106921685105technical%20rock%20climbing%20white.svg.hi.png">
+<head>
+  <link rel="stylesheet" type="text/css" href="Page 4.css">
+</head>
+<title>Normalisation</title>
+<img class = "banner" src = "banner.png">
+
+<ul><b>
+  <li><a href="#home">Databases - The basics</a></li>
+  <li><a href="#news">The language of SQL</a></li>
+  <li><a href="#contact">DBMS</a></li>
+  <li><a class="active" href="#about">Normalisation</a></li>
+  <li><a href="#about">Database security</a></li>
+</ul></b>
+
+<hr>
+<h1><u> Normalisation </u></h1>
+<div>
+<h2><u>What is Database normalisation?</u></h2>
+<p> Database normalisation is the process of organizing attributes and tables of a relational database to reduce the risk of data redundancy and to improve data integrity, created by Edgar Codd to improve upon the already existing relational model (Shown below)</p>
+<img src = "https://www.tutorialspoint.com/dbms/images/mapping_relationship.png">
+<p> The first version of normal form (1NF) released in 1970, was to allow data to be queried in first-order logic using the universal data sub-language. SQL is an example of this.
+The main focus was to reduce the dependancy on restructering relations, decrease types of anomolies (see box to the right) and to make it more user friendly.</p>
+<h3><u> Forms of Normalisation </u></h3>
+<p><b><u>1NF -</b></u> In the First Normal Form, rows cannot repeat groups of data, meaning each column must have a unique value, this is to prevent multiple columns trying to access the same row at the same time.</p>
+<p><b><u>2NF -</b></u> In Second Normal Form, there shouldn't be dependency on any column with a primary key. Therefore for a table that has a linked primary key, columns not aflicted with the intial primary key must depend on a completely different key.</p>
+<p><b><u>3NF -</b></u> In Third Normal Form, non-prime attributes of tables must be dependant on a given primary key so the problem of non-prime attributes determining themselves does not occur.</p> 
+</div>
+<div class ="box2">
+<h2><u>Data anomolies</u></h2>
+<p><b><u>Update Anomaly -</b></u> An Update Anomaly occurs when one or more instances of duplicated data is updated or changed, but some are still not.</p>
+<p><b><u>Insertion Anomaly -</b></u> An Insertion Anomaly occurs when attributes cannot be added into a database without the presence of another attribute, this is the opposite of a deletion anomaly, where data is over stored.</p>
+<p><b><u>Deletion Anomaly -</b></u> A Delete Anomaly occurs when attributes are lost or undefined because of the deletion of other attributes so the database is confused on where to link and store data to.</p>
+<img class = "pic" src = "http://www.dbta.com/Images/Default.aspx?ImageID=17358">
+<hr>
+<h3><u> Conditions of Normalisation </u></h3>
+<p> For a database to be considered 'Normalised' it must meet certain criteria:</p>
+
+<p> 1) All items in a column must have the same type.</p>
+<p> 2) The number of columns must be the same for all rows in a table.</p>
+<p> 3) It must be possible to uniquely identify each row.</p>
+<p> 4) There is no implied row order requried.</p>
+
+
+</div>
+</body>
+</html>
